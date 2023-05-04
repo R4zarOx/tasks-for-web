@@ -1,32 +1,41 @@
+function delivery(country, price) {
+    country = country[0].toUpperCase() + country.slice(1, country.length);
+
+    alert(`Доставка в ${country} буде коштувати ${price} кредитів`)
+}
+
 var country = prompt("Введiть країну", "");
 var price;
 
 country = country.toLowerCase();
-switch (country)
-{
-    case null:
-        console.log('Скасовано користувачем!');
-        break;
-    case "китай":
-        price = 100;
-        break;
-    case "чилі":
-        price = 250;
-        break;
-    case "австралія":
-        price = 170;
-        break;
-    case "індія":
-        price = 80;
-        break;
-    case "ямайка":
-        price = 120;
-        break;
-    default:
-        alert('У вашій країні доставка недоступна');
-        break;
+
+if (country == null) {
+    alert("Скасовано користувачем!")
 }
-
-country = country[0].toUpperCase() + country.slice(1, country.length);
-
-console.log(`Доставка в ${country} буде коштувати ${price} кредитів`)
+else {
+    switch (country) {
+        case "китай":
+            price = 100;
+            delivery(country, price)
+            break;
+        case "чилі":
+            price = 250;
+            delivery(country, price)
+            break;
+        case "австралія":
+            price = 170;
+            delivery(country, price)
+            break;
+        case "індія":
+            price = 80;
+            delivery(country, price)
+            break;
+        case "ямайка":
+            price = 120;
+            delivery(country, price)
+            break;
+        default:
+            alert('У вашій країні доставка недоступна');
+            break;
+    }
+}
