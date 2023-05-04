@@ -1,5 +1,5 @@
 let total = 0;
-let input = 0;
+let input;
 do {
     total += parseInt(input);
     input = prompt("Введiть число", "");
