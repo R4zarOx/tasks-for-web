@@ -1,6 +1,6 @@
-var credits = 23580;
-var pricePerDroid = 3000;
-var countOfDroids, totalPrice;
+let credits = 23580;
+let pricePerDroid = 3000;
+let countOfDroids, totalPrice;
     
 countOfDroids = prompt("Введіть кількість дроїдів", "");
 if (countOfDroids == null)
@@ -10,15 +10,16 @@ if (countOfDroids == null)
 else 
 {
     totalPrice = countOfDroids * pricePerDroid;
+    if (totalPrice <= credits)
+    {
+        credits -= totalPrice;
+        console.log(`Ви купили ${countOfDroids} дроїдів, на рахунку залишилося ${credits} кредитів.`)
+    }
+    else
+    {
+        console.log("Недостатньо коштів на рахунку!");
+    }
+
 }
 
-if (totalPrice <= credits)
-{
-    credits -= totalPrice;
-    console.log(`Ви купили ${countOfDroids} дроїдів, на рахунку залишилося ${credits} кредитів.`)
-}
-else
-{
-    console.log("Недостатньо коштів на рахунку!");
-}
 
