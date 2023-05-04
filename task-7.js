@@ -1,6 +1,6 @@
 function checkStorage(available, ordered)
 {
-    var message;
+    let message;
 
     if (ordered == 0)
     {

@@ -4,8 +4,8 @@ function delivery(country, price) {
     alert(`Доставка в ${country} буде коштувати ${price} кредитів`)
 }
 
-var country = prompt("Введiть країну", "");
-var price;
+let country = prompt("Введiть країну", "");
+let price;
 
 country = country.toLowerCase();
 
